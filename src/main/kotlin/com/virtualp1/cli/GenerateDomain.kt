@@ -19,7 +19,7 @@ class GenerateDomain : AnAction() {
     val name = Messages.showInputDialog(
       project,
       "Enter new domain name",
-      "@frontend/cli",
+      "VueStrata",
       AllIcons.Nodes.Folder,
     )
 
@@ -27,7 +27,7 @@ class GenerateDomain : AnAction() {
       Messages.showErrorDialog(
         project,
         "Domain name cannot be empty",
-        "@frontend/cli"
+        "VueStrata"
       )
 
       return
@@ -38,7 +38,7 @@ class GenerateDomain : AnAction() {
       Messages.showErrorDialog(
         project,
         "Directory '$name' already exists",
-        "@frontend/cli"
+        "VueStrata"
       )
       return
     }

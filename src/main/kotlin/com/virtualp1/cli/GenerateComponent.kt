@@ -24,7 +24,7 @@ class GenerateComponent : AnAction() {
     val name = Messages.showInputDialog(
       project,
       "Enter component name",
-      "@frontend/cli",
+      "VueStrata",
       AllIcons.Nodes.Folder,
     )
 
@@ -32,7 +32,7 @@ class GenerateComponent : AnAction() {
       Messages.showErrorDialog(
         project,
         "Component name cannot be empty",
-        "@frontend/cli"
+        "VueStrata"
       )
 
       return
@@ -43,7 +43,7 @@ class GenerateComponent : AnAction() {
       Messages.showErrorDialog(
         project,
         "Component '$name' already exists",
-        "@frontend/cli"
+        "VueStrata"
       )
       return
     }

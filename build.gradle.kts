@@ -39,6 +39,9 @@ intellijPlatform {
 }
 
 tasks {
+    buildPlugin {
+        // Build zip-file
+    }
     // Set the JVM compatibility versions
     withType<JavaCompile> {
         sourceCompatibility = "21"
