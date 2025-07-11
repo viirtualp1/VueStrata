@@ -27,7 +27,7 @@
         <action
             id="com.virtualp1.cli.GenerateDomain"
             class="com.virtualp1.cli.GenerateDomain"
-            text="Generate Domain"
+            text="Domain"
             description="Generate new domain"
             icon="AllIcons.Nodes.Folder"
         >
@@ -40,7 +40,7 @@
         <action
             id="com.virtualp1.cli.GenerateComponent"
             class="com.virtualp1.cli.GenerateComponent"
-            text="Generate Component"
+            text="Component"
             description="Generate new component"
             icon="AllIcons.Nodes.Folder"
         >
