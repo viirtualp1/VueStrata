@@ -1,4 +1,4 @@
-package com.virtualp1.cli
+package com.virtualp1.vuestrata
 
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
