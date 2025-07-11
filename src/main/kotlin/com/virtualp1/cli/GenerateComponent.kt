@@ -23,7 +23,7 @@ class GenerateComponent : AnAction() {
 
     val name = Messages.showInputDialog(
       project,
-      "Enter new domain name",
+      "Enter component name",
       "@frontend/cli",
       AllIcons.Nodes.Folder,
     )
@@ -31,7 +31,7 @@ class GenerateComponent : AnAction() {
     if (name == null || name.isEmpty()) {
       Messages.showErrorDialog(
         project,
-        "Domain name cannot be empty",
+        "Component name cannot be empty",
         "@frontend/cli"
       )
 
@@ -42,7 +42,7 @@ class GenerateComponent : AnAction() {
     if (existingDir != null) {
       Messages.showErrorDialog(
         project,
-        "Directory '$name' already exists",
+        "Component '$name' already exists",
         "@frontend/cli"
       )
       return
@@ -67,7 +67,7 @@ class GenerateComponent : AnAction() {
       vueDocument?.setText(vueContent)
 
       val indexContent = """
-        export $name from './$name.vue'
+        export { default as $name } from './$name.vue'
       """.trimIndent()
       val indexDocument = indexFile.virtualFile.toDocument()
       indexDocument?.setText(indexContent)
