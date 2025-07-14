@@ -1,54 +1,66 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.virtualp1.vuestrata</id>
+  <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+  <id>com.virtualp1.vuestrata</id>
 
-    <!-- Public plugin name should be written in Title Case.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>VueStrata</name>
+  <!-- Public plugin name should be written in Title Case.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+  <name>VueStrata</name>
 
-    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://github.com/viirtualp1">virutalp1</vendor>
+  <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+  <vendor url="https://github.com/viirtualp1">virutalp1</vendor>
 
-    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description>Generate domain/component in your project</description>
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+  <description>Generate domain/component in your project</description>
 
-    <!-- Product and plugin compatibility requirements.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+  <!-- Product and plugin compatibility requirements.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
 
-    <!-- Extension points defined by the plugin.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
+  <!-- Extension points defined by the plugin.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+  <extensions defaultExtensionNs="com.intellij"></extensions>
 
-    </extensions>
-    <actions>
-        <action
-            id="com.virtualp1.vuestrata.GenerateDomain"
-            class="com.virtualp1.vuestrata.GenerateDomain"
-            text="Domain"
-            description="Generate new domain"
-            icon="AllIcons.Nodes.Folder"
-        >
-            <add-to-group
-                group-id="NewGroup"
-                relative-to-action="NewDir"
-                anchor="after"
-            />
-        </action>
-        <action
-            id="com.virtualp1.vuestrata.GenerateComponent"
-            class="com.virtualp1.vuestrata.GenerateComponent"
-            text="Component"
-            description="Generate new component"
-            icon="AllIcons.Nodes.Folder"
-        >
-            <add-to-group
-                group-id="NewGroup"
-                relative-to-action="NewDir"
-                anchor="after"
-            />
-        </action>
-    </actions>
+  <actions>
+    <action
+      id="com.virtualp1.vuestrata.GenerateLayer"
+      class="com.virtualp1.vuestrata.GenerateLayer"
+      text="Layer"
+      description="Create layers"
+        icon="AllIcons.Nodes.Folder"
+    >
+      <add-to-group
+        group-id="NewGroup"
+        relative-to-action="NewDir"
+        anchor="after"
+      />
+    </action>
+    <action
+      id="com.virtualp1.vuestrata.GenerateComponent"
+      class="com.virtualp1.vuestrata.GenerateComponent"
+      text="Component"
+      description="Create new component"
+      icon="AllIcons.Nodes.Folder"
+    >
+      <add-to-group
+        group-id="NewGroup"
+        relative-to-action="NewDir"
+        anchor="after"
+      />
+    </action>
+    <action
+      id="com.virtualp1.vuestrata.GenerateSlice"
+      class="com.virtualp1.vuestrata.GenerateSlice"
+      text="Slice"
+      description="Create new slice"
+      icon="AllIcons.Nodes.Folder"
+    >
+      <add-to-group
+        group-id="NewGroup"
+        relative-to-action="NewDir"
+        anchor="after"
+      />
+    </action>
+  </actions>
 </idea-plugin>
